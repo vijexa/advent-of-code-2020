@@ -41,7 +41,7 @@ object Day5 extends Problem(2020, 5) {
       .sorted
       .sliding(2)
       .collectFirst{
-        case x :: xs :: Nil if xs - x != 1 => (x, xs)
+        case x :: xs :: Nil if xs - x != 1 => xs - 1
       }
   )
 
