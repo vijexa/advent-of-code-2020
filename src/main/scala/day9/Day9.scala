@@ -42,11 +42,12 @@ object Day9 extends Problem(2020, 9) {
     ): Option[Long] =
       list match {
         case head :: next => 
-          if (sum + head == target) Some(min + max)
-          else if (sum + head > target) None
+          val currentSum = sum + head
+          if (currentSum == target) Some(min + max)
+          else if (currentSum > target) None
           else findSum(
             list = next, 
-            sum = sum + head, 
+            sum = currentSum, 
             min = if (head < min) head else min,
             max = if (head > max) head else max
           )
