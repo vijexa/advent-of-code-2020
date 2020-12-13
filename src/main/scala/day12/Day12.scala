@@ -1,11 +1,6 @@
 package day12
 
 import aocd.Problem
-import day12.Day12.North
-import day12.Day12.South
-import day12.Day12.East
-import day12.Day12.West
-import day12.Day12.Forward
 
 object Day12 extends Problem(2020, 12) {
 
